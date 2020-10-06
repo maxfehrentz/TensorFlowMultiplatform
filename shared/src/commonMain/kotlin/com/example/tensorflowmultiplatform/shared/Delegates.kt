@@ -1,5 +1,5 @@
 package com.example.tensorflowmultiplatform.shared
 
-expect class Platform() {
-    val platform: String
+enum class Delegates {
+    CPU, NPU, METAL
 }

@@ -4,6 +4,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("kotlin-android-extensions")
+    kotlin("native.cocoapods")
 }
 group = "com.example.tensorflowmultiplatform"
 version = "1.0-SNAPSHOT"
@@ -16,15 +17,22 @@ repositories {
 }
 kotlin {
     android()
-    ios {
-        binaries {
-            framework {
-                baseName = "shared"
-            }
-        }
+    ios()
+    cocoapods {
+        // Configure fields required by CocoaPods.
+        summary = "Testing TensorFlow"
+        homepage = "No link provided."
+        // You can change the name of the produced framework.
+        // By default, it is the name of the Gradle project.
+        frameworkName = "shared"
+        ios.deploymentTarget = "13.0"
     }
     sourceSets {
-        val commonMain by getting
+        val commonMain by getting {
+            dependencies {
+                implementation("org.koin:koin-core:3.0.1-alpha-2")
+            }
+        }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test-common"))
@@ -42,7 +50,13 @@ kotlin {
                 implementation("junit:junit:4.12")
             }
         }
-        val iosMain by getting
+        // distinction between x64 and arm64 necessary?
+        val iosX64Main by getting {
+            kotlin.srcDir("iosMain")
+        }
+        val iosArm64Main by getting {
+            kotlin.srcDir("iosMain")
+        }
         val iosTest by getting
     }
 }
@@ -61,16 +75,3 @@ android {
         }
     }
 }
-val packForXcode by tasks.creating(Sync::class) {
-    group = "build"
-    val mode = System.getenv("CONFIGURATION") ?: "DEBUG"
-    val sdkName = System.getenv("SDK_NAME") ?: "iphonesimulator"
-    val targetName = "ios" + if (sdkName.startsWith("iphoneos")) "Arm64" else "X64"
-    val framework = kotlin.targets.getByName<KotlinNativeTarget>(targetName).binaries.getFramework(mode)
-    inputs.property("mode", mode)
-    dependsOn(framework.linkTask)
-    val targetDir = File(buildDir, "xcode-frameworks")
-    from({ framework.outputDirectory })
-    into(targetDir)
-}
-tasks.getByName("build").dependsOn(packForXcode)
