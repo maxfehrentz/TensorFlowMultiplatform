@@ -5,6 +5,7 @@ INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/s
 INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/src/main/AndroidManifest.xml:2:1-17:12
 INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/src/main/AndroidManifest.xml:2:1-17:12
 MERGED from [:shared] /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:0.6.1] /Users/max/.gradle/caches/transforms-2/files-2.1/b757e7423e39725d0650e955864f7e03/multiplatform-settings-debug/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/129e66c0fba5ff6f84fb5ec39e43a49f/material-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/71ef5c8ea6608002fa419b472cc87157/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/max/.gradle/caches/transforms-2/files-2.1/a73dfa83e71212192bbbea50afe10cda/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -88,6 +89,8 @@ INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/s
 INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/src/main/AndroidManifest.xml
 MERGED from [:shared] /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:shared] /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:0.6.1] /Users/max/.gradle/caches/transforms-2/files-2.1/b757e7423e39725d0650e955864f7e03/multiplatform-settings-debug/AndroidManifest.xml:20:5-44
+MERGED from [com.russhwolf:multiplatform-settings-android-debug:0.6.1] /Users/max/.gradle/caches/transforms-2/files-2.1/b757e7423e39725d0650e955864f7e03/multiplatform-settings-debug/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/129e66c0fba5ff6f84fb5ec39e43a49f/material-1.2.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/129e66c0fba5ff6f84fb5ec39e43a49f/material-1.2.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/max/.gradle/caches/transforms-2/files-2.1/71ef5c8ea6608002fa419b472cc87157/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41

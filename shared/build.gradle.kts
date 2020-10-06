@@ -31,6 +31,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 implementation("org.koin:koin-core:3.0.1-alpha-2")
+                implementation("com.russhwolf:multiplatform-settings:0.6.1")
             }
         }
         val commonTest by getting {
@@ -53,9 +54,15 @@ kotlin {
         // distinction between x64 and arm64 necessary?
         val iosX64Main by getting {
             kotlin.srcDir("iosMain")
+            dependencies {
+                implementation("org.koin:koin-core:3.0.1-alpha-2")
+            }
         }
         val iosArm64Main by getting {
             kotlin.srcDir("iosMain")
+            dependencies {
+                implementation("org.koin:koin-core:3.0.1-alpha-2")
+            }
         }
         val iosTest by getting
     }
