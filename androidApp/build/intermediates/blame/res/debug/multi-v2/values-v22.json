@@ -4,7 +4,7 @@
             "outputFile": "/Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/89fd46896b81984f5ccd930347803140/appcompat-1.2.0/res/values-v22/values-v22.xml",
+                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/71ef5c8ea6608002fa419b472cc87157/appcompat-1.2.0/res/values-v22/values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

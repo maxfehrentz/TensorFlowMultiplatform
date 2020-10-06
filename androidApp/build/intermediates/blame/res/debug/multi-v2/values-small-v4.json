@@ -4,7 +4,7 @@
             "outputFile": "/Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/build/intermediates/incremental/mergeDebugResources/merged.dir/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/d4cedc6652cc39e3cac04d692afa3d52/material-1.2.0/res/values-small-v4/values-small-v4.xml",
+                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/129e66c0fba5ff6f84fb5ec39e43a49f/material-1.2.0/res/values-small-v4/values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

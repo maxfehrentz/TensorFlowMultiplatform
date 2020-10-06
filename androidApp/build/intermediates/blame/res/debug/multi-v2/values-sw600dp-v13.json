@@ -4,7 +4,7 @@
             "outputFile": "/Users/max/Documents/Envidual/TensorFlowMultiplatform/androidApp/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml",
             "map": [
                 {
-                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/89fd46896b81984f5ccd930347803140/appcompat-1.2.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/71ef5c8ea6608002fa419b472cc87157/appcompat-1.2.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/d4cedc6652cc39e3cac04d692afa3d52/material-1.2.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
+                    "source": "/Users/max/.gradle/caches/transforms-2/files-2.1/129e66c0fba5ff6f84fb5ec39e43a49f/material-1.2.0/res/values-sw600dp-v13/values-sw600dp-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,10,11,12,13,14",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
