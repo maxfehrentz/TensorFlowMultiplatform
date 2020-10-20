@@ -37,4 +37,8 @@ android {
             isMinifyEnabled = false
         }
     }
+
+    aaptOptions {
+        noCompress("tflite")
+    }
 }
