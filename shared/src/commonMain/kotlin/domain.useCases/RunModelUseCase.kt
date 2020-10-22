@@ -1,5 +1,5 @@
 package domain.useCases
 
-class RunModelUseCase {
-
+interface RunModelUseCase {
+    fun invoke(): ContinousData
 }

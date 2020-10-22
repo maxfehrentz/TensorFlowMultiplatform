@@ -22,6 +22,8 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import domain.data.BodyPart
+import domain.data.Person
 import java.lang.Math.abs
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
@@ -523,7 +525,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
             paint
         )
         canvas.drawText(
-            "Device: %s".format(posenet.device),
+            "Device: %s".format(posenet.delegate),
             (15.0f * widthRatio),
             (50.0f * heightRatio + bottom),
             paint

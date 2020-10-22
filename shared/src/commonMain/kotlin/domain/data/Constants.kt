@@ -1,4 +1,4 @@
-package com.example.tensorflowmultiplatform.shared
+package domain.data
 
 class Constants {
     companion object {
