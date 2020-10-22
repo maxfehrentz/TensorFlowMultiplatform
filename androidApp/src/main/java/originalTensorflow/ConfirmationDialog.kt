@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.tensorflowmultiplatform.androidApp
+package originalTensorflow
 
 import android.Manifest
 import android.app.AlertDialog

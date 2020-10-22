@@ -1,4 +1,4 @@
-package com.example.tensorflowmultiplatform.androidApp
+package originalTensorflow
 
 import android.Manifest
 import android.app.AlertDialog
@@ -22,12 +22,17 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import newTensorFlow.PosenetViewModel
+import com.example.tensorflowmultiplatform.androidApp.R
 import java.lang.Math.abs
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 
-class PosenetFragment : Fragment(),
-ActivityCompat.OnRequestPermissionsResultCallback {
+class OriginalPosenetFragment : Fragment(),
+    ActivityCompat.OnRequestPermissionsResultCallback {
+
+    lateinit var posenetViewModel: PosenetViewModel
 
     /** List of body joints that should be connected.    */
     private val bodyJoints = listOf(
@@ -57,6 +62,9 @@ ActivityCompat.OnRequestPermissionsResultCallback {
     /** A shape for extracting frame data.   */
     private val PREVIEW_WIDTH = 640
     private val PREVIEW_HEIGHT = 480
+//    private val PREVIEW_WIDTH = 800
+//    private val PREVIEW_HEIGHT = 640
+
 
     /** An object for the Posenet library.    */
     private lateinit var posenet: Posenet
@@ -123,19 +131,20 @@ ActivityCompat.OnRequestPermissionsResultCallback {
 
         override fun onOpened(cameraDevice: CameraDevice) {
             cameraOpenCloseLock.release()
-            this@PosenetFragment.cameraDevice = cameraDevice
+            Log.d("Procedure", "onOpend called in stateCallback")
+            this@OriginalPosenetFragment.cameraDevice = cameraDevice
             createCameraPreviewSession()
         }
 
         override fun onDisconnected(cameraDevice: CameraDevice) {
             cameraOpenCloseLock.release()
             cameraDevice.close()
-            this@PosenetFragment.cameraDevice = null
+            this@OriginalPosenetFragment.cameraDevice = null
         }
 
         override fun onError(cameraDevice: CameraDevice, error: Int) {
             onDisconnected(cameraDevice)
-            this@PosenetFragment.activity?.finish()
+            this@OriginalPosenetFragment.activity?.finish()
         }
     }
 
@@ -148,6 +157,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
             request: CaptureRequest,
             partialResult: CaptureResult
         ) {
+            Log.d("Procedure", "onCaptureProgressed called in captureCallback")
         }
 
         override fun onCaptureCompleted(
@@ -155,6 +165,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
             request: CaptureRequest,
             result: TotalCaptureResult
         ) {
+            Log.d("Procedure", "onCaptureCompleted called in captureCallback")
         }
     }
 
@@ -168,27 +179,34 @@ ActivityCompat.OnRequestPermissionsResultCallback {
         activity?.runOnUiThread { Toast.makeText(activity, text, Toast.LENGTH_SHORT).show() }
     }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         Log.d("Procedure", "Called onCreateView in PosenetActivity")
-        return inflater.inflate(R.layout.posenet_fragment, container, false)
+        return inflater.inflate(R.layout.original_posenet_fragment, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("Procedure", "Called onViewCreated in PosenetActivity")
-        surfaceView = view.findViewById(R.id.surfaceView)
+        surfaceView = view.findViewById(R.id.original_surface_view)
         surfaceHolder = surfaceView!!.holder
+
     }
 
     override fun onResume() {
+        Log.d("Procedure", "Called onResume in PosenetFragment")
         super.onResume()
         startBackgroundThread()
     }
 
     override fun onStart() {
+        Log.d("Procedure", "Called onStart in PosenetFragment")
         super.onStart()
         openCamera()
         posenet = Posenet(this.context!!)
@@ -243,7 +261,8 @@ ActivityCompat.OnRequestPermissionsResultCallback {
                 val characteristics = manager.getCameraCharacteristics(cameraId)
 
                 // We don't use a front facing camera in this sample.
-                val cameraDirection = characteristics.get(CameraCharacteristics.LENS_FACING)
+                var cameraDirection = characteristics.get(CameraCharacteristics.LENS_FACING)
+//                cameraDirection = CameraCharacteristics.LENS_FACING_FRONT
                 if (cameraDirection != null &&
                     cameraDirection == CameraCharacteristics.LENS_FACING_FRONT
                 ) {
@@ -252,6 +271,13 @@ ActivityCompat.OnRequestPermissionsResultCallback {
 
                 previewSize = Size(PREVIEW_WIDTH, PREVIEW_HEIGHT)
 
+                /*
+                *
+                * NOT needed to run the code
+                * WHY??!?!
+                * Set again in createCameraPreviewSession to same defaults
+                *
+                *  **/
                 imageReader = ImageReader.newInstance(
                     PREVIEW_WIDTH, PREVIEW_HEIGHT,
                     ImageFormat.YUV_420_888, /*maxImages*/ 2
@@ -289,7 +315,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
      * Opens the camera specified by [PosenetActivity.cameraId].
      */
     private fun openCamera() {
-        val permissionCamera = getContext()!!.checkPermission(
+        val permissionCamera = context!!.checkPermission(
             Manifest.permission.CAMERA, Process.myPid(), Process.myUid()
         )
         if (permissionCamera != PackageManager.PERMISSION_GRANTED) {
@@ -372,6 +398,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
     /** A [OnImageAvailableListener] to receive frames as they are available.  */
     private var imageAvailableListener = object : OnImageAvailableListener {
         override fun onImageAvailable(imageReader: ImageReader) {
+            Log.d("Procedure", "onImageAvailabe called")
             // We need wait until we have some size from onPreviewSizeChosen
             if (previewWidth == 0 || previewHeight == 0) {
                 return
@@ -516,24 +543,24 @@ ActivityCompat.OnRequestPermissionsResultCallback {
             }
         }
 
-        canvas.drawText(
-            "Score: %.2f".format(person.score),
-            (15.0f * widthRatio),
-            (30.0f * heightRatio + bottom),
-            paint
-        )
-        canvas.drawText(
-            "Device: %s".format(posenet.device),
-            (15.0f * widthRatio),
-            (50.0f * heightRatio + bottom),
-            paint
-        )
-        canvas.drawText(
-            "Time: %.2f ms".format(posenet.lastInferenceTimeNanos * 1.0f / 1_000_000),
-            (15.0f * widthRatio),
-            (70.0f * heightRatio + bottom),
-            paint
-        )
+//        canvas.drawText(
+//            "Score: %.2f".format(person.score),
+//            (15.0f * widthRatio),
+//            (30.0f * heightRatio + bottom),
+//            paint
+//        )
+//        canvas.drawText(
+//            "Device: %s".format(posenet.device),
+//            (15.0f * widthRatio),
+//            (50.0f * heightRatio + bottom),
+//            paint
+//        )
+//        canvas.drawText(
+//            "Time: %.2f ms".format(posenet.lastInferenceTimeNanos * 1.0f / 1_000_000),
+//            (15.0f * widthRatio),
+//            (70.0f * heightRatio + bottom),
+//            paint
+//        )
 
         // Draw!
         surfaceHolder!!.unlockCanvasAndPost(canvas)
@@ -557,6 +584,7 @@ ActivityCompat.OnRequestPermissionsResultCallback {
      * Creates a new [CameraCaptureSession] for camera preview.
      */
     private fun createCameraPreviewSession() {
+        Log.d("Procedure", "createCameraPreviewSession was called")
         try {
             // We capture images from preview in YUV format.
             imageReader = ImageReader.newInstance(
@@ -578,6 +606,8 @@ ActivityCompat.OnRequestPermissionsResultCallback {
                 listOf(recordingSurface),
                 object : CameraCaptureSession.StateCallback() {
                     override fun onConfigured(cameraCaptureSession: CameraCaptureSession) {
+                        Log.d("Procedure", "onConfigured in CameraCaptureSession.StateCallback was called")
+
                         // The camera is already closed
                         if (cameraDevice == null) return
 
