@@ -8,9 +8,8 @@
     android:id="@+id/main_view"
     tools:context=".MainActivity">
 
-  <fragment
+  <FrameLayout
       android:id="@+id/fragment_container"
-      android:name="com.example.tensorflowmultiplatform.androidApp.PosenetFragment"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       app:layout_constraintBottom_toBottomOf="parent"

@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */package com.example.tensorflowmultiplatform.androidApp
+ */package originalTensorflow
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -122,7 +122,9 @@ class Posenet(
     // 1 * 9 * 9 * 34 contains offsets
     val offsetsShape = interpreter.getOutputTensor(1).shape()
     outputMap[1] = Array(offsetsShape[0]) {
-      Array(offsetsShape[1]) { Array(offsetsShape[2]) { FloatArray(offsetsShape[3]) } }
+      Array(offsetsShape[1]) {
+        Array(offsetsShape[2]) {
+          FloatArray(offsetsShape[3]) } }
     }
 
     // 1 * 9 * 9 * 32 contains forward displacements
@@ -149,7 +151,7 @@ class Posenet(
    * args:
    *      bitmap: image bitmap of frame that should be processed
    * returns:
-   *      person: a com.example.tensorflowmultiplatform.androidApp.Person object containing data about keypoint locations and confidence scores
+   *      person: a originalTensorflow.Person object containing data about keypoint locations and confidence scores
    */
   @Suppress("UNCHECKED_CAST")
   fun estimateSinglePose(bitmap: Bitmap): Person {
