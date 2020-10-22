@@ -6,8 +6,8 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="24"
-8-->/Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+8-->/Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->/Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+9-->/Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 10
 11</manifest>

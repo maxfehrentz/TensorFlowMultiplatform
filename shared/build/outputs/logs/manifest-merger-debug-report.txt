@@ -1,37 +1,37 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
 	package
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:70-123
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:70-123
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:1-125
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:11-69
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml:2:11-69
 uses-sdk
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		ADDED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
-		INJECTED from /Users/matteowohlrapp/OneDrive/Arbeit/Envidual/Apps/Tensorflow/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		ADDED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
+		INJECTED from /Users/max/Documents/Envidual/TensorFlowMultiplatform/shared/src/androidMain/AndroidManifest.xml
